@@ -130,7 +130,7 @@ function gameBoard(){
     return board;
 }
 
-function getPlayers(e){
+function startGame(e){
     e.preventDefault();
     const player1 = player(player1NameInput.value,'X',player1Name,player1Marker,player1Container);
     const player2 = player(player2NameInput.value,'O',player2Name,player2Marker,player2Container);
@@ -178,7 +178,7 @@ const mainContainer = document.querySelector(".game");
 const player1NameInput = document.querySelector(".player-1-name-input");
 const player2NameInput = document.querySelector(".player-2-name-input");
 const playButton = document.querySelector(".play-button");
-playButton.addEventListener("click",getPlayers);
+playButton.addEventListener("click",startGame);
 
 let gameStart;
 
