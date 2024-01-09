@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Tic Tac Toe</title>
+        <title>Tik Tak Toe</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <script src="index.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     </head>
     <body>
-        
+        <div class="modal-container">
+            <form action="" method="get" class="player-form">
+                <div class="welcome">
+                    <h1 class="welcome-title">Welcome To Tik Tak Toe</h1>
+                    <p class="welcome-instructions">Please select each players name, the 'X' marker will be given to Player
+                        1 and the 'O' marker to Player 2.
+                    </p>
+                </div>
+                <div class="player-selection">
+                    <div class="player-1">
+                        <label for="player-1">Player 1 Name: </label>
+                        <input type="text" name="player-1-name" id="player-1" class="player-1-name-input">
+                    </div>
+                    <div class="player2">
+                        <label for="player-2">Player 2 Name: </label>
+                        <input type="text" name="player-1-name" id="player-2" class="player-2-name-input">
+                    </div>
+                </div>
+                <button type="submit" class="play-button">Play!</button>
+            </form>
+        </div>
+        <main class="game">
+            <h1 class="title">Tik Tak Toe</h1>
+            <div class="game-container">
+                <div class="player-1-container">
+                    <h2 class="player-title">Name: <span class="player-1-name"></span></h2>
+                    <h2 class="marker-title">Marker: <span class="player-1-marker"></span></h2>
+                </div>
+                <div class="game-board"></div>
+                <div class="player-2-container">
+                    <h2 class="player-title">Name: <span class="player-2-name"></span></h2>
+                    <h2 class="marker-title">Marker: <span class="player-2-marker"></span></h2>
+                </div>
+            </div>
+        </main>
+        <div class="game-end">
+            <div class="announcement">
+                <h1 class="game-result">Yo</h1>
+                <button class="play-again">Play Again!</button>
+            </div>
+        </div>
     </body>
 </html>

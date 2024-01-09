@@ -4,4 +4,164 @@ html,body{
 
 *{
     box-sizing: border-box;
+    font-family: 'Permanent Marker',Arial, Helvetica, sans-serif;
+}
+
+.modal-container{
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container .player-form{
+    background-color: bisque;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.modal-container .player-form .welcome{
+    text-align: center;
+}
+
+.modal-container .player-form .welcome .welcome-title{
+    margin: 0;
+}
+
+.modal-container .player-form .welcome .welcome-instructions{
+    margin: 0;
+}
+
+.modal-container .player-form .player-selection{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.modal-container .player-form .play-button{
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 1.3rem;
+    padding: 5px 20px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.modal-container .player-form .play-button:hover{
+    background-color: #004953;
+    transform: scale(1.1);
+}
+
+/* ----------------------------------------------------------------- */
+
+main{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+main .game-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+main .game-container .player-1-container, main .game-container .player-2-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main .game-container .player-title, main .game-container .marker-title{
+    margin: 0;
+}
+
+main .game-container .game-board{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    width: 500px;
+    height: 500px;
+    justify-items: center;
+    align-items: center;
+}
+
+main .game-container .game-board .quadrant{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    max-width: 100%;
+}
+
+main .game-container .game-board .quadrant-1,main .game-container .game-board .quadrant-2,main .game-container .game-board .quadrant-3{
+    border-top: none;
+}
+
+main .game-container .game-board .quadrant-1,main .game-container .game-board .quadrant-4,main .game-container .game-board .quadrant-7{
+    border-left: none;
+}
+
+main .game-container .game-board .quadrant-3,main .game-container .game-board .quadrant-6,main .game-container .game-board .quadrant-9{
+    border-right: none;
+}
+
+main .game-container .game-board .quadrant-7,main .game-container .game-board .quadrant-8,main .game-container .game-board .quadrant-9{
+    border-bottom: none;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+.game-end{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-end .announcement{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+}
+
+.game-end .announcement .game-result{
+    margin: 0;
+}
+
+.game-end .announcement .play-again{
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 1.3rem;
+    padding: 5px 20px;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+.game-end .announcement .play-again:hover{
+    background-color: #004953;
+    transform: scale(1.1);
 }
